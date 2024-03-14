@@ -33,22 +33,4 @@ class Solution {
         }
         return result.toString();
     }
-
-
-    public static void main(String[] args) {
-        Solution solution = new Solution();
-        String word1 = "abc";
-        String word2 = "pqr";
-        System.out.println(solution.mergeAlternately(word1, word2));
-
-
-        word1 = "ab";
-        word2 = "pqrs";
-        System.out.println(solution.mergeAlternately(word1, word2));
-
-
-        word1 = "abcd";
-        word2 = "pq";
-        System.out.println(solution.mergeAlternately(word1, word2));
-    }
 }

@@ -32,12 +32,8 @@ public class Solution {
                     for(int b = 0; b < m; b++) {
                         matrix[b][j] = 0;
                     }
-
                 }
             }
         }
-
-
-
     }
 }

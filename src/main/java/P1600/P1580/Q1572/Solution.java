@@ -22,6 +22,5 @@ public class Solution {
             res = res - mat[m / 2][m / 2];
         }
         return res;
-
     }
 }

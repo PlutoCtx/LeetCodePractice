@@ -15,7 +15,6 @@ public class Solution {
         int vertical = 0;
         int horizontal = 0;
 
-
         char[] charMoves = moves.toCharArray();
         for(int i = 0; i < charMoves.length; i++) {
             if(charMoves[i] == 'L') {
@@ -31,9 +30,7 @@ public class Solution {
                 vertical --;
             }
         }
-
         return vertical == 0 && horizontal == 0;
-
     }
 
 }
