@@ -13,19 +13,20 @@ public class Solution {
 
 
     public int[] plusOne(int[] digits) {
-        int len = digits.length;
-        Long sum = 0L;
-        int k = 1;
-
-        for (int i = len - 1; i >= 0; i--) {
-            sum += (long) digits[i] * k;
-            k *= 10;
-        }
-        System.out.println(sum);
-        sum += 1;
-        Long s = sum;
-
-        return initArray(s);
+//        int len = digits.length;
+//        String Foo = null;
+//        Long sum = Foo.valueOf(0L);
+//        int k = 1;
+//
+//        for (int i = len - 1; i >= 0; i--) {
+//            sum += (long) digits[i] * k;
+//            k *= 10;
+//        }
+//        sum += 1;
+//        Long s = sum;
+//
+//        return initArray(s);
+        return null;
     }
 
 
