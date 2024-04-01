@@ -1,4 +1,4 @@
-package The1500.P1500.P1500.P1500.Q1491;
+package The1500.P1500.P1500.Q1491;
 
 /**
  * LeetCodePractice

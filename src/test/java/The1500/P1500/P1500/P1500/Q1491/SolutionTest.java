@@ -1,5 +1,6 @@
 package The1500.P1500.P1500.P1500.Q1491;
 
+import The1500.P1500.P1500.Q1491.Solution;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
