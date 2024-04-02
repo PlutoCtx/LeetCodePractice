@@ -12,30 +12,29 @@ package The1500.P1100.P1060.Q1056;
 public class Solution {
 
     public boolean confusingNumber(int n) {
-        int len = 1;
-        int temp = n;
-        while (temp != 0) {
-            if (temp / 10 != 0) {
-                len++;
-            }
-            temp = temp / 10;
-        }
-//        System.out.println(temp + "\t" + len);
-        int[] special = new int[]{0, 1, 6, 8, 9};
-        int[] exceptions = new int[]{2, 3, 4, 5, 7};
-        int[] common = new int[]{0, 1, 8};
-
-        if (len == 1) {
-            if (n == 0 || n == 1 || n == 8) {
+        int original = n;
+        int rotated = 0;
+        while (original > 0) {
+            int rotatedDigit = getRotatedDigit(original % 10);
+            if (rotatedDigit < 0) {
                 return false;
-            } else {
-                return true;
             }
-        } else {
-
+            rotated = rotated * 10 + rotatedDigit;
+            original /= 10;
         }
-
-
-        return true;
+        return rotated != n;
     }
+
+    public int getRotatedDigit(int digit) {
+        if (digit == 0 || digit == 1 || digit == 8) {
+            return digit;
+        }
+        if (digit == 6 || digit == 9) {
+            return 15 - digit;
+        }
+        return -1;
+    }
+
+
+
 }
