@@ -1,4 +1,4 @@
-package The3000.P3100.P3080.Q3065;
+package The3500.P3100.P3080.Q3065;
 
 /**
  * LeetCodePractice
