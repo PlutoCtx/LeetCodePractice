@@ -15,5 +15,5 @@ public class Node {
     Node pre;
     Node next;
     Node(String str) {this.str = str;}
-    
+
 }
