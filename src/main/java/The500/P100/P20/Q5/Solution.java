@@ -1,5 +1,7 @@
 package The500.P100.P20.Q5;
 
+import java.util.logging.Logger;
+
 /**
  * LeetCodePractice
  * 最长回文子串
@@ -16,9 +18,12 @@ public class Solution {
             return s;
         }
         int strLen = s.length();
-        int maxStart = 0;  //最长回文串的起点
-        int maxEnd = 0;    //最长回文串的终点
-        int maxLen = 1;  //最长回文串的长度
+        //最长回文串的起点
+        int maxStart = 0;
+        //最长回文串的终点
+        int maxEnd = 0;
+        //最长回文串的长度
+        int maxLen = 1;
 
         boolean[][] dp = new boolean[strLen][strLen];
 
@@ -33,9 +38,7 @@ public class Solution {
 
                     }
                 }
-
             }
-
         }
         return s.substring(maxStart, maxEnd + 1);
 
