@@ -10,6 +10,17 @@ package The500.P100.P40.Q21;
  */
 
 class Solution {
+
+    /**
+     * 执行用时分布 0 ms
+     * 击败 100.00% 使用 Java 的用户
+     * 消耗内存分布 41.38 MB
+     * 击败 81.28% 使用 Java 的用户
+     *
+     * @param l1    升序链表
+     * @param l2    升序链表
+     * @return          合并后的升序链表
+     */
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         if (l1 == null) {
             return l2;
