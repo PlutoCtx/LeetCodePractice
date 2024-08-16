@@ -11,18 +11,28 @@ package The500.P300.P300.Q283;
 
 public class Solution {
 
+    /**
+     * 移动零
+     * 将数组中所有的0都移动到最后，同时各个非零元素的相对位置不变
+     * @param nums  数组
+     */
     public void moveZeroes(int[] nums) {
-        int numsLength = nums.length;
-
-        for(int i = 0; i < numsLength - 1; i++) {
-            for(int j = 0; j < numsLength - 1; j++) {
-                int temp;
-                if(nums[j] == 0) {
-                    temp = nums[j];
-                    nums[j] = nums[j + 1];
-                    nums[j + 1] = temp;
+        boolean swapped;
+        for (int i = 0; i < nums.length - 1; i++) {
+            swapped = false;
+            for (int j = i + 1; j < nums.length; j++) {
+                if (nums[i] == 0) {
+                    int temp = nums[i];
+                    nums[i] = nums[j];
+                    nums[j] = temp;
+                    swapped = true;
                 }
             }
+            if (!swapped) {
+                break;
+            }
+
         }
+
     }
 }
