@@ -18,8 +18,8 @@ public class Solution {
      * 一个小组的最大实力值
      * 执行用时分布 2 ms
      * 击败 54.14%
-     * 消耗内存分布 43.16 MB
-     * 击败 16.54%
+     * 消耗内存分布 43.04 MB
+     * 击败 26.31%
      * @param nums  小组的值，整数，有正有负有0
      * @return      最大实力值
      */
@@ -29,13 +29,13 @@ public class Solution {
         List<Integer> negativeNumbers = new ArrayList<>();
         List<Integer> zeros = new ArrayList<>();
 
-        for (int i = 0; i < nums.length; i++) {
-            if (nums[i] == 0) {
+        for (int num : nums) {
+            if (num == 0) {
                 zeros.add(0);
-            } else if (nums[i] > 0) {
-                positiveNumbers.add(nums[i]);
+            } else if (num > 0) {
+                positiveNumbers.add(num);
             } else {
-                negativeNumbers.add(nums[i]);
+                negativeNumbers.add(num);
             }
         }
 
@@ -48,7 +48,6 @@ public class Solution {
         if (isPositiveNumberExist) {
             if (isNegativeNumberExist) {
                 if (negativeNumbers.size() == 1) {
-//                    return multiplePositiveNumbers(positiveNumbers);
                     return maxPositive;
                 } else {
                     return maxPositive * maxNegative;
@@ -70,190 +69,7 @@ public class Solution {
             } else {
                 return 0;
             }
-
         }
-
-//        long res = 1;
-//
-//        long positive = 1;
-//        if (positiveNumbers.size() > 0) {
-//            for (int i = 0; i < positiveNumbers.size(); i++) {
-//                positive *= positiveNumbers.get(i);
-//            }
-//        } else {
-//            positive = 0;
-//        }
-//
-//
-//        long zero;
-//        if (zeros.size() != 0) {
-//            zero = 0;
-//        }
-//
-//        long negative = 1;
-//        if (!negativeNumbers.isEmpty()) {
-//            for (int i = 0; i < negativeNumbers.size(); i++) {
-//                negative *= negativeNumbers.get(i);
-//            }
-//        }
-//
-//        boolean positiveNumberExist = !positiveNumbers.isEmpty();
-//        boolean negativeNumberExist = !negativeNumbers.isEmpty();
-//        boolean zeroExist = !zeros.isEmpty();
-//
-//        if (positiveNumberExist) {
-//            long negativeMax = maxNegativeNumber(negativeNumbers);
-//            return negativeMax * positive;
-//        } else {
-//
-//            if (negativeNumberExist) {
-//                if (negativeNumbers.size() == 1) {
-//                    if (zeroExist) {
-//                        return 0;
-//                    } else {
-//                        return negativeNumbers.get(0);
-//                    }
-//                } else {
-//                    long negativeMax = maxNegativeNumber(negativeNumbers);
-//                    return negativeMax;
-//                }
-//            } else {
-//                if (zeroExist) {
-//                    return 0;
-//                } else {
-//                    return 0;
-//                }
-//            }
-//
-//
-//        }
-
-
-
-
-
-//        List<Integer> negativeNumbers = new ArrayList<>();
-//
-//        if(nums.length == 13 || nums.length == 12) {
-//            if(nums[0] == 0 &&
-//                    nums[1] == 0 &&
-//                    nums[2] == 0 &&
-//                    nums[3] == 0 &&
-//                    nums[4] == 0 &&
-//                    nums[5] == 0 &&
-//                    nums[6] == 0 &&
-//                    nums[7] == 0 &&
-//                    nums[8] == 0
-//            ) {
-//                if (nums[nums.length - 1] == 9) {
-//                    return 9;
-//                }
-//                return 0;
-//            }
-//        }
-//        /*for(int i = 0; i < nums.length; i++) {
-//            boolean flag = true;
-//            if(nums[i] != 0) {
-//                flag = false;
-//            }
-//        }
-//        if(!flag) {
-//
-//        }*/
-//        if (nums.length == 2) {
-//            if (nums[0] == 0 && nums[1] < 0) {
-//                return 0;
-//            }
-//            if (nums[0] < 0 && nums[1] == 0) {
-//                return 0;
-//            }
-//        }
-//
-//        if (nums.length == 3) {
-//            if (nums[0] == 0 && nums[1] == -5 && nums[2] == 0) {
-//                return 0;
-//            }
-//        }
-//
-//        if (nums.length == 1) {
-//            return nums[0];
-//        }
-//        long res = 1;
-//        // System.out.println("*************************");
-//        for (int i = 0; i < nums.length; i++) {
-//
-//            if (nums[i] != 0) {
-//
-//                res *= nums[i];
-//                System.out.println(res + "\t" + nums[i]);
-//            }
-//            if (nums[i] < 0) {
-//                negativeNumbers.add(nums[i]);
-//            }
-//        }
-//        if (res > 0) {
-//            return res;
-//        } else {
-//            long max = res;
-//
-//            for (int i = 0; i < negativeNumbers.size(); i++) {
-//                if (max < res / negativeNumbers.get(i)) {
-//                    max = res / negativeNumbers.get(i);
-//                }
-//            }
-//            return max;
-//        }
-
-
-
-
-
-
-//        List<Integer> negativeNumbers = new ArrayList<>();
-//
-//        if (nums.length == 2) {
-//            if (nums[0] == 0 && nums[1] < 0) {
-//                return 0;
-//            }
-//            if (nums[0] < 0 && nums[1] == 0) {
-//                return 0;
-//            }
-//        }
-//
-//        if (nums.length == 3) {
-//            if (nums[0] == 0 && nums[1] == -5 && nums[2] == 0) {
-//                return 0;
-//            }
-//        }
-//
-//        if (nums.length == 1) {
-//            return nums[0];
-//        }
-//        long res = 1;
-//        // System.out.println("*************************");
-//        for (int i = 0; i < nums.length; i++) {
-//
-//            if (nums[i] != 0) {
-//
-//                res *= nums[i];
-//                System.out.println(res + "\t" + nums[i]);
-//            }
-//            if (nums[i] < 0) {
-//                negativeNumbers.add(nums[i]);
-//            }
-//        }
-//        if (res > 0) {
-//            return res;
-//        } else {
-//            long max = res;
-//
-//            for (int i = 0; i < negativeNumbers.size(); i++) {
-//                if (max < res / negativeNumbers.get(i)) {
-//                    max = res / negativeNumbers.get(i);
-//                }
-//            }
-//            return max;
-//        }
     }
 
     /**
@@ -290,7 +106,6 @@ public class Solution {
 
     }
 
-
     /**
      * 正数数组相乘得到结果
      * @param positiveNumbers   正数数组
@@ -303,26 +118,6 @@ public class Solution {
         }
         return res;
     }
-
-
-//    private long maxNegativeNumber(List<Integer> negativeNumbers) {
-//        long res = 1;
-//        for (int i = 0; i < negativeNumbers.size(); i++) {
-//            res *= negativeNumbers.get(i);
-//        }
-//        if (res > 0) {
-//            return res;
-//        }
-//
-//        long max = res;
-//        for (int i = 0; i < negativeNumbers.size(); i++) {
-//            if (max < max / negativeNumbers.get(i)) {
-//                max = max / negativeNumbers.get(i);
-//            }
-//        }
-//
-//        return max;
-//    }
 
 
 }
