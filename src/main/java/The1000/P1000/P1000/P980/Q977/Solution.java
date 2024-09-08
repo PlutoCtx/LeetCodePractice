@@ -34,47 +34,13 @@ public class Solution {
 
         sortList(res);
         return res;
-//        int[] result = new int[res.length];
-//        int leftIndex = 0;
-//        int rightIndex = 0;
-//        int minIndex = 0;
-//        for (int i = 0; i < res.length; i++) {
-//            if (res[i] < nums[minIndex]) {
-//                minIndex = i;
-//            }
-//        }
-//
-//        if (minIndex != res.length - 1) {
-//            rightIndex = minIndex + 1;
-//        } else {
-//            for (int i = res.length - 1; i >= 0; i--) {
-//                result[res.length - 1 - i] = res[i];
-//            }
-//            return result;
-//        }
-//
-//        if (minIndex != 0) {
-//            leftIndex = minIndex - 1;
-//        } else {
-//            return res;
-//        }
-//
-//        result[0] = res[minIndex];
-//        int i = 1;
-//        while (leftIndex >= 0 || rightIndex < res.length) {
-//            if (rightIndex < res.length && res[leftIndex] >= res[rightIndex]) {
-//                result[i] = res[rightIndex];
-//                rightIndex ++;
-//            } else {
-//                result[i] = res[leftIndex];
-//                leftIndex --;
-//            }
-//            i++;
-//        }
-//
-//        return result;
+
     }
 
+    /**
+     * 二院选择排序
+     * @param arr   待排序数组
+     */
     private void sortList(int[] arr) {
 
         int minIndex, maxIndex;
